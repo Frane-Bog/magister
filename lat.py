@@ -7,8 +7,9 @@ import os
 import random
 from turtle import position
 from xml.dom.expatbuilder import Rejecter
+import dependencies
 
-#Main function callbackse
+#Main function latinskog
 class main():
     def _start_():
         n = 10 
@@ -33,10 +34,11 @@ class ispit_latinski():
                 ispitani = []
                 broj_rijeci = len(rimljanin)-1
                 misc.radnom_pitanje(broj_rijeci, ispitani)
+                dependencies.misc.radnom_pitanje(broj_rijeci, ispitani)
 
                 while k != koliko_trazis:
                     x = random.randint(0,1)
-                    vrijednost = misc.radnom_pitanje(broj_rijeci, ispitani)
+                    vrijednost = dependencies.misc.radnom_pitanje(broj_rijeci, ispitani)
                     if x==0: 
                         rijesenje = input(rimljanin[vrijednost] + "= ")
                     else:
@@ -67,25 +69,6 @@ class ispit_latinski():
             print(rijesenje)
             return -1
 
-#Klasa ostalih funkcija
-class misc():
-    
-    def zamijeni_str(a, b, izuzetak, zamjena_izuterka):
-        for i in range(len(b)):
-            if b[i] in a:
-                a = a.replace(b[i], "")
-        for i in range(len(izuzetak)):
-            if izuzetak[i] in a:
-                a = a.replace(izuzetak[i], zamjena_izuterka[i])
-        return a
-    
-    def radnom_pitanje(koliko_ih_ima, koji_su_obavljeni):
-        broj = int()
-        broj = random.randint(0,koliko_ih_ima)
-        while broj in koji_su_obavljeni:
-            broj = random.randint(0,koliko_ih_ima)
-        return broj
-
 #Klasa svih ostalih funkcija za latinski 
 class misscelanious_latinski():
     def ocisti_rici():
@@ -98,7 +81,7 @@ class misscelanious_latinski():
             for i in range(len(neocisceno)):
                 x = neocisceno[i].lower()
                 problemi = ["\n", " "]
-                x = misc.zamijeni_str(x, problemi, ["–","="], ["-"]) 
+                x = dependencies.misc.zamijeni_str(x, problemi, ["–","="], ["-"]) 
                 cisto.append(x)
 
             with open("dependencies/rijeci-hrv.txt", "a", encoding="utf-8") as hrvat:
@@ -123,8 +106,3 @@ class misscelanious_latinski():
         with open("dependencies/sporke_rici.txt", "w") as fp:
             fp.write(" ")
             pass
-
-misscelanious_latinski.ocisti_rici()
-main._start_()
-
- 
