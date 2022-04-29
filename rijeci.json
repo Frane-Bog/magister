@@ -1,0 +1,51 @@
+{
+
+    "glagoli":
+    [
+        {
+            "glagol":"",
+            "konjugacija":"",
+            "prijevod":"",
+            "n":""
+        },
+        {
+            "glagol":"",
+            "konjugacija":"",
+            "prijevod":"",
+            "n":""
+        }
+    ],
+
+    "imenice":
+    [
+        {
+            "imenica":"",
+            "genitiv":"",
+            "deklinacija":"",
+            "rod":"",
+            "prijevod":"",
+            "n":""
+        }
+    ],
+
+    "pridjevi":
+    [
+        {
+            "pridjev":"",
+            "muski_rod":"",
+            "srednji_rod":"",
+            "zenski_rod":"",
+            "deklinacija":"",
+            "prijevod":"",
+            "n":""
+        }
+    ],
+
+    "prijedlozi":
+    [
+        {
+            "prijedlog":"",
+            "prijevod":""
+        }
+    ] 
+}

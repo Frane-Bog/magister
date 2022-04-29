@@ -33,7 +33,6 @@ class ispit_latinski():
                 k = int()
                 ispitani = []
                 broj_rijeci = len(rimljanin)-1
-                misc.radnom_pitanje(broj_rijeci, ispitani)
                 dependencies.misc.radnom_pitanje(broj_rijeci, ispitani)
 
                 while k != koliko_trazis:
